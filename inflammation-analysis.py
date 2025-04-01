@@ -17,7 +17,6 @@ def main(args):
     if not isinstance(in_files, list):
         in_files = [args.infiles]
 
-
     for filename in in_files:
         inflammation_data = models.load_csv(filename)
 
@@ -27,6 +26,7 @@ def main(args):
             'min': models.daily_min(inflammation_data)}
 
         views.visualize(view_data)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
