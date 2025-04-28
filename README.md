@@ -9,6 +9,9 @@ This repository is intended to be used as a reference or starting point for lear
 Presently, the `main` branch represents the state of the repository at the end of section 3.
 Fork this repository if you wish to continue from a particular section (see below).
 
+> [!IMPORTANT]
+> When forking this repository, remember to **uncheck** the box which says to copy the `main` branch only.
+
 This software project is not finished, does not contain a LICENCE file, the code is currently failing to run and contains some code style issues. 
 It is used as a starting point for the course - issues will be fixed and code will be added in a number of places during the course by learners in their own copies of the repository, as course topics are introduced.
 
