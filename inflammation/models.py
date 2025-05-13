@@ -44,6 +44,18 @@ def daily_min(data):
     """
     return np.min(data, axis=0)
 
+
+
+def s_dev(data):
+    """Computes and returns standard deviation for data."""
+    mmm = np.mean(data, axis=0)
+    devs = []
+    for entry in data:
+        devs.append((entry - mmm) * (entry - mmm))
+
+    s_dev2 = sum(devs) / len(data)
+    return {'standard deviation': s_dev2}
+
 def patient_normalise(data):
     """Normalise patient data from a 2D inflammation data array."""
     if not isinstance(data, np.ndarray):
@@ -57,3 +69,4 @@ def patient_normalise(data):
         normalised = data / max_data[:, np.newaxis]
     normalised[np.isnan(normalised)] = 0
     return normalised
+
